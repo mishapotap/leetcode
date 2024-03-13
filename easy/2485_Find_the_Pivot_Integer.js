@@ -19,4 +19,16 @@
 //   }
 //   return -1;
 // };
+// Второе решение с сложностью O(n)
+// var pivotInteger = function (n) {
+//   let totalSum = (n * (n + 1)) / 2; // Сумма всех чисел от 1 до n
+//   let removedSum = 0;
+//   while (totalSum > removedSum) {
+//     removedSum += n;
+//     if (totalSum === removedSum) return n;
+//     totalSum -= n;
+//     n--;
+//   }
+//   return -1;
+// };
 // console.log(pivotInteger(n));
